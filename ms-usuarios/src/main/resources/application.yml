@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: ms-usuarios
+server:
+  port: 0
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+hystrix:
+  command:
+    testCallTwo:
+      execution:
+        isolation.thread.timeoutInMilliseconds: 1000
+      circuitBreaker:
+        requestVolumeThreshold: 2  # For testing purposes
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: true
+      base-path: /actuator
+    enabled-by-default: true
+feign:
+  hystrix:
+    enabled: true

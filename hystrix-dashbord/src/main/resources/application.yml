@@ -1,0 +1,20 @@
+info:
+ name: HYSTRIX-DASHBOARD
+ description: HYSTRIX-DASHBOARD
+ version: 1.0.0
+---
+server:
+  port: 9100
+---
+eureka:
+#  hostname: localhost
+#  password: s3cr3t
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+turbine:
+  aggregator:
+    clusterConfig: MYCLUSTER
+  appConfig: ms-contratos,ms-usuarios,ms-notificacoes,ms-assinaturas,zuul-server  # No spaces (see https://github.com/spring-cloud/spring-cloud-netflix/issues/948)
+  clusterNameExpression: metadata['cluster']
+  combineHostPort: true  # Necessary if you run two or more services in a single host

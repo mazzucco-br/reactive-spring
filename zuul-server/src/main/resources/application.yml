@@ -1,0 +1,43 @@
+info:
+  name: zuul-server
+  description: Zuul Server
+  version: 1.0.0
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    restart:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+server:
+  port: 8080
+eureka:
+  instance:
+    metadataMap:
+      cluster: MYCLUSTER
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    ms-contratos:
+      path: /contratos/**
+      serviceId: ms-contratos
+      strip-prefix: false
+    ms-usuarios:
+      path: /usuarios/**
+      serviceId: ms-usuarios
+      strip-prefix: false
+  ws:
+    brokerages:
+      ms-contratos:
+        end-points: /ws/contratos
+        brokers:  /topic
+        destination-prefixes: /app  
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [trace=%X{X-B3-TraceId:-},span=%X{X-B3-SpanId:-}] [%15.15t] %-40.40logger{39}: %m%n'

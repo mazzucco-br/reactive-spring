@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: hystrix-turbine
+server:
+  port: 9200
+
+management:
+  endpoint:
+    env:
+      post:
+        enabled: true
+    hystrix:
+      stream:
+        enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
+    service-registry:
+      enabled: true
+    features:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+turbine:
+  aggregator:
+      clusterConfig: MS-CONTRATOS,MS-USUARIOS,MS-NOTIFICACOES,MS-ASSINATURAS,ZUUL-SERVER
+  appConfig: ms-contratos,ms-usuarios,ms-notificacoes,ms-assinaturas,zuul-server

@@ -1,0 +1,12 @@
+/*.project
+/*.settings
+target
+.classpath
+.project
+.settings
+.springBeans
+/portal/src/main/web/dist
+/portal/src/main/web/node_modules
+/portal/src/main/web/package-lock.json
+node
+node_modules

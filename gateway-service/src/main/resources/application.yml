@@ -1,0 +1,31 @@
+server:
+  port: 8060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+              
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: ms-contratos
+        uri: lb://ms-contratos
+        predicates:
+        - Path=/contratos/**
+        filters:
+        - RewritePath=/contratos/(?<path>.*), /$\{path}
+      - id: ms-usuarios
+        uri: lb://ms-usuarios
+        predicates:
+        - Path=/usuarios/**
+        filters:
+        - RewritePath=/usuarios/(?<path>.*), /$\{path}
