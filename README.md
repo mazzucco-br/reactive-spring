@@ -18,6 +18,38 @@ O foco de prova de conceito foi aplicar uma arquitetura responsiva, resiliente, 
 
 •	ms-contratos - Microserviço para cadastramento de contratos, após receber um contrato é retornado um ID como resposta, os demais processos são feitos assincronamente, que são; validação e notificação de signatários.
 
+http://localhost:8080/contratos
+```
+{
+	"descricao": "Contrato de Compra",
+  "termo": {
+    "arquivo": "VGVybW8gZGUgY29tcHJh",
+    "tipo": "txt"
+  }
+	"responsavel": {
+		"nome": "Rafaela",
+		"email": "rafaela@gmail.com",
+		"cpf": "00000000434"
+	},
+	"signatarios": [
+		{
+			"nome": "Ana",
+			"email": "ana@gmail.com",
+			"cpf": "00000000191"
+		},
+		{
+			"nome": "Bruna",
+			"email": "bruna@gmail.com",
+			"cpf": "00000000272"
+		},
+		{
+			"nome": "Camila",
+			"email": "camila@gmail.com",
+			"cpf": "00000000353"
+		}
+	]
+}
+```
 •	ms-assinaturas - Microserviço que valida e regista assinaturas.
 
 •	ms-usuarios - Microserviço para criação, atualização e listagem de usuários.
