@@ -18,7 +18,7 @@ O foco de prova de conceito foi aplicar uma arquitetura responsiva, resiliente, 
 
 •	ms-contratos - Microserviço para cadastramento de contratos, após receber um contrato é retornado um ID como resposta, os demais processos são feitos assincronamente, que são; validação e notificação de signatários.
 
-http://localhost:8080/contratos
+POST http://localhost:8080/contratos
 ```
 {
 	"descricao": "Contrato de Compra",
