@@ -1,6 +1,10 @@
-# reative-spring
+# reactive-spring
 
-https://github.com/armdev/reactive-spring-cloud/tree/master/google
+Neste repositório é disponibilizado uma prova de conceito de uma arquitetura reativa contemplando os requisitos do Manifesto Reativo https://www.reactivemanifesto.org/pt-BR.
+
+Para uma prova de conceito foi proposto um cenário tendo um cartório digital que certifica a assinatura de documentos digitalmente. Esse processo é iniciado através de um cadastramento de contrato, contendo descrição, um arquivo binário, no formato texto ou PDF, CPF, nome, e e-mail do responsável, juntamente com uma lista de signatários, nome, e-mail e CPF. Após o cadastramento do contrato as partes envolvidas são notificadas através de e-mail e podem realizar assinatura através de um portal.
+
+O foco de prova de conceito foi aplicar uma arquitetura responsiva, resiliente, elástica e orientada por mensagens, isto é, contemplando os requisitos definidos no Manifesto Reativo utilizando o Spring Framework 5 como plataforma.
 
 ## Os seguintes projetos foram criados
 
@@ -22,6 +26,8 @@ https://github.com/armdev/reactive-spring-cloud/tree/master/google
 
 •	Portal - Página WEB simples, onde é possível a listagem dos últimos contratos e assinaturas através utilizando WebSockets.
 
+A execução pode ser realidada através do script run.sh, a ser executado através do Git Bash em ambiente Windows 
+
 ## Soluções de código aberto utilizadas:
 
 •	Jenkins - Responsável por disponibilizar realizar a compilação e disponibilizar para execução os serviços, bem como escalá-los ou desativá-los conforme a demanda.
@@ -32,7 +38,7 @@ https://github.com/armdev/reactive-spring-cloud/tree/master/google
 
 ## Front End
 
-•O front-end foi desenvolvido em Angular 4 que está consumindo os endpoints em REST
+• O front-end foi desenvolvido em Angular 4 que está consumindo os endpoints em REST
 
 ##### instruções para subir o servidor Angular CLI
 - npm install
