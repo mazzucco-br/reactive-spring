@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+.contrato-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table-content {
+  width: 80%;
+  border: 1px solid gray;
+  padding: 1px;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  height: 50px;
+}
+
+.click-tr {
+  cursor: pointer;
+}
+
+.click-tr:hover {
+  opacity: 0.7 !important;
+}
+
+.detail-tr {
+  display: flex;
+  justify-content: center;
+  background-color: white !important;
+}
+
+th {
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+.td-detail {
+  height: 50px;
+  padding: 10px;
+  width: 80%;
+  background-color: white;
+}

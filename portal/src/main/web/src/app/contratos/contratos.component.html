@@ -1,0 +1,46 @@
+<div class="contrato-container mt-5">
+  <div class="table-content">
+    <table *ngIf="contratos"
+           class="table-striped">
+      <thead class="">
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          Descrição
+        </th>
+        <th>
+          Data
+        </th>
+        <th>
+          Arquivo
+        </th>
+      </tr>
+      </thead>
+      <ng-container *ngFor="let contrato of contratos; let position = index">
+        <tr class="click-tr"
+            (click)="openDetails(position)">
+          <td>
+            {{  contrato.id }}
+          </td>
+          <td>
+            {{ contrato.descricao }}
+          </td>
+          <td>
+            {{ contrato.data | date: 'dd/MM/yyyy' }}
+          </td>
+          <td>
+            {{ 'Arquivo ' + position }}
+          </td>
+        </tr>
+        <tr class="detail-tr"
+            *ngIf="position === detailOpened">
+          <div class="td-detail">
+            {{ 'detalhe contrato ' + position }}
+          </div>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</div>

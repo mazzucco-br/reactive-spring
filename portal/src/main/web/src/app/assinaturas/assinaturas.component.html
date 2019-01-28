@@ -1,0 +1,28 @@
+<div class="contrato-container mt-5">
+  <div class="table-content">
+    <table *ngIf="assinaturas"
+           class="table-striped">
+      <thead class="">
+      <tr>
+        <th>
+          Assinaturas
+        </th>
+      </tr>
+      </thead>
+      <ng-container *ngFor="let assinatura of assinaturas; let position = index">
+        <tr class="click-tr"
+            (click)="openDetails(position)">
+          <td>
+            {{ 'assinatura ' + position }}
+          </td>
+        </tr>
+        <tr class="detail-tr"
+            *ngIf="position === detailOpened">
+          <div class="td-detail">
+            {{ 'detalhe assinatura ' + position }}
+          </div>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</div>
