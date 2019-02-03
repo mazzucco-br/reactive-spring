@@ -16,3 +16,4 @@ hystrix:
         isolation.thread.timeoutInMilliseconds: 500
       circuitBreaker:
         requestVolumeThreshold: 2  # For testing purposes
+management:  endpoint:    shutdown:      enabled: true

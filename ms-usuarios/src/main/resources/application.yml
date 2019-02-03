@@ -20,7 +20,7 @@ management:
   endpoint:
     health:
       enabled: true
-      show-details: always
+      show-details: always    shutdown:      enabled: true
   endpoints:
     jmx:
       exposure:
