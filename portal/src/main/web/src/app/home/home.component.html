@@ -1,0 +1,33 @@
+<!-- NAV -->
+
+<div class="nav">
+  <div class="nav-title">
+    <h1>{{ title }}</h1>
+  </div>
+</div>
+
+<!-- CONTAINER -->
+
+<div class="container">
+
+  <!-- BUTTON CONTAINER -->
+
+  <div class="btn-container mt-4">
+    <button class="btn btn-lg btn-primary"
+            routerLink="contratos">
+      {{ 'Contratos' }}
+    </button>
+    <button class="btn btn-lg btn-primary"
+            routerLink="assinaturas">
+      {{ 'Assinaturas' }}
+    </button>
+  </div>
+
+</div>
+
+<!-- CONTENT CONTAINER -->
+
+<div class="content-container">
+  <router-outlet></router-outlet>
+</div>
+
