@@ -12,9 +12,9 @@ O foco de prova de conceito foi aplicar uma arquitetura responsiva, resiliente, 
 
 •	zuul-server - API gateway que disponibiliza os serviços e faz roteamento dinâmico utilizando o eureka-server.
 
-•	hystrix-tubine – Agregador que monitora todas as instâncias de serviços registrados no eureka-server e disponibiliza os dados agrupados por serviço.
+•	hystrix-turbine – Agregador que monitora todas as instâncias de serviços registrados no eureka-server e disponibiliza os dados agrupados por serviço.
 
-•	hystrix-dashbord - Interface de monitoramento onde se pode acompanhar em tempo real os serviços em execução, este apresenta as informações geradas pelo hystrix-tubine. O dashboard apresenta muitas informações úteis tais como, volume de tráfego, porcentagem de sucesso e falha, latência mínima, média e máxima, estado do circuit breaker, dentre outras.
+•	hystrix-dashbord - Interface de monitoramento onde se pode acompanhar em tempo real os serviços em execução, este apresenta as informações geradas pelo hystrix-turbine. O dashboard apresenta muitas informações úteis tais como, volume de tráfego, porcentagem de sucesso e falha, latência mínima, média e máxima, estado do circuit breaker, dentre outras.
 
 •	ms-contratos - Microserviço para cadastramento de contratos, após receber um contrato é retornado um ID como resposta, os demais processos são feitos assincronamente, que são; validação e notificação de signatários.
 
@@ -58,7 +58,7 @@ POST http://localhost:8080/contratos
 
 •	Portal - Página WEB simples, onde é possível a listagem dos últimos contratos e assinaturas através utilizando WebSockets.
 
-A execução pode ser realidada através do script run.sh, a ser executado através do Git Bash em ambiente Windows 
+A execução pode ser realidada através do script run.sh, a ser executado através do Git Bash em ambiente Windows
 
 ## Soluções de código aberto utilizadas:
 

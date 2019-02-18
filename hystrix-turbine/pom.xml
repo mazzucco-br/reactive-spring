@@ -7,8 +7,8 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>hystrix-tubine</artifactId>
-	<name>hystrix-tubine</name>
+	<artifactId>hystrix-turbine</artifactId>
+	<name>hystrix-turbine</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
