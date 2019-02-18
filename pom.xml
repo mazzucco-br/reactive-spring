@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 	<modules>
 		<module>eureka-server</module>
-		<module>hystrix-dashbord</module>
+		<module>hystrix-dashboard</module>
 		<module>hystrix-turbine</module>
 		<module>ms-commons</module>
 		<module>ms-assinaturas</module>

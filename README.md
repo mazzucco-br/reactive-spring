@@ -14,7 +14,7 @@ O foco de prova de conceito foi aplicar uma arquitetura responsiva, resiliente, 
 
 •	hystrix-turbine – Agregador que monitora todas as instâncias de serviços registrados no eureka-server e disponibiliza os dados agrupados por serviço.
 
-•	hystrix-dashbord - Interface de monitoramento onde se pode acompanhar em tempo real os serviços em execução, este apresenta as informações geradas pelo hystrix-turbine. O dashboard apresenta muitas informações úteis tais como, volume de tráfego, porcentagem de sucesso e falha, latência mínima, média e máxima, estado do circuit breaker, dentre outras.
+•	hystrix-dashboard - Interface de monitoramento onde se pode acompanhar em tempo real os serviços em execução, este apresenta as informações geradas pelo hystrix-turbine. O dashboard apresenta muitas informações úteis tais como, volume de tráfego, porcentagem de sucesso e falha, latência mínima, média e máxima, estado do circuit breaker, dentre outras.
 
 •	ms-contratos - Microserviço para cadastramento de contratos, após receber um contrato é retornado um ID como resposta, os demais processos são feitos assincronamente, que são; validação e notificação de signatários.
 
